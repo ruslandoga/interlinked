@@ -21,7 +21,8 @@ defmodule Interlinked.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:xqlite, github: "ruslandoga/xqlite"}
+      {:xqlite,
+       github: "ruslandoga/xqlite", system_env: [{"XQLITE_CFLAGS", "-DSQLITE_ENABLE_DBPAGE_VTAB"}]}
     ]
   end
 end
